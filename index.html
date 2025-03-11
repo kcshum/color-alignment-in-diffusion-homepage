@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Color alignment in Diffusion maps diffused colors to conditional colors across diffusion steps, enabling a continuous pathway for synthesizing target color patterns while maintaining the creativity of diffusion models.">
+  <meta property="og:title" content="Color Alignment in Diffusion"/>
+  <meta property="og:description" content="Color alignment in Diffusion maps diffused colors to conditional colors across diffusion steps, enabling a continuous pathway for synthesizing target color patterns while maintaining the creativity of diffusion models."/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/method.png" />
+  <meta property="og:image:width" content="802"/>
+  <meta property="og:image:height" content="1088"/>
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Color alignment, Color Condition, Palette Condition, Diffusion Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Color Alignment in Diffusion's Academic Project Page</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+                  <h1 class="title is-1 publication-title">Color Alignment in Diffusion</h1>
+                  <h1 class="title is-4 publication-conference"> CVPR 2025 </h1>
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <a href="https://scholar.google.com/citations?user=LAUhTjAAAAAJ&hl">Ka Chun Shum</a><sup>1</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://sonhua.github.io/">Binh-Son Hua</a><sup>2</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://experts.deakin.edu.au/37904-duc-thanh-nguyen">Duc Thanh Nguyen</a><sup>3</sup>,
+                    </span>
+                    <span class="author-block">
+                      <a href="https://saikit.org/index.html">Sai-Kit Yeung</a><sup>1</sup>
+                    </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Hong Kong University of Science and Technology,</span>
+                    <span class="author-block"><sup>2</sup>Trinity College Dublin,</span>
+                    <span class="author-block"><sup>3</sup>Deakin University</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                    <!-- ArXiv abstract Link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/2503.06746" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                   <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/files/Color_Alignment_in_Diffusion__Supp.zip" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-archive"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Image-->
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/method.png" alt="An overview of our method"/>
+          <h2 class="subtitle has-text-centered">
+            <br>
+            <strong>Color alignment in Diffusion</strong> maps the diffused colors to conditional colors across diffusion steps, enabling a continuous pathway for data synthesis towards a target color pattern while preserving the creative power of diffusion models.
+          </h2>
+        </div>
+    </div>
+</section>
+<!-- End teaser Image -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Diffusion models have shown great promise in synthesizing visually appealing images. However, it remains challenging to condition the synthesis at a fine-grained level, for instance, synthesizing image pixels following some generic color pattern.
+            Existing image synthesis methods often produce contents that fall outside the desired pixel conditions.
+            To address this, we introduce a novel color alignment algorithm that confines the generative process in diffusion models within a given color pattern. Specifically, we project diffusion terms, either imagery samples or latent representations, into a conditional color space to align with the input color distribution. This strategy simplifies the prediction in diffusion models within a color manifold while still allowing plausible structures in generated contents, thus enabling the generation of diverse contents that comply with the target color pattern.
+            Experimental results demonstrate our state-of-the-art performance in conditioning and controlling of color pixels, while maintaining on-par generation quality and diversity in comparison with regular diffusion models.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <br>
+      <h2 class="title is-3">Color-aligned Generation on Manual Drawing Conditions</h2>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/qua_manually_drawn.png" alt="Results on manual drawing conditions."/>
+          <h2 class="subtitle has-text-centered">
+            <i>View additional results and baseline comparisons below.
+                <br>More can be found in the supplementary zip file.</i>
+          </h2>
+        </div>
+    </div>
+
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0005_towel.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0006_bus.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0008_door.jpg" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0018_lamp.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0034_car.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0048_bed.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0051_skateboard.jpg" alt="MY ALT TEXT"/>
+    </div>
+                 <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0054_vase.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0062_airplane.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0069_shoe.jpg" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0095_suitcase.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0098_rocket.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0105_cup.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0108_ticket.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0127_painting.jpg" alt="MY ALT TEXT"/>
+    </div>
+                 <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0129_guitar.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0132_belt.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/manual_drawing/0135_boat.jpg" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0140_shampoo.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0154_bottle.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0159_helmet.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0170_map.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/manual_drawing/0211_dog.jpg" alt="MY ALT TEXT"/>
+    </div>
+                <!-- Your image here -->
+      <img src="static/images/manual_drawing/0225_bag.jpg" alt="MY ALT TEXT"/>
+    </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+        <br>
+      <h2 class="title is-3">Color-aligned Generation on In-the-wild Image Conditions</h2>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/qua_in_the_wild.png" alt="Results on in-the-wild image conditions."/>
+          <h2 class="subtitle has-text-centered">
+            <i>View additional results and baseline comparisons below.
+                <br>More can be found in the supplementary zip file.</i>
+          </h2>
+        </div>
+    </div>
+
+      <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0017_flower.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0022_statue.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0030_shampoo.jpg" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0034_bag.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0046_kite.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0089_desk.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0090_ticket.jpg" alt="MY ALT TEXT"/>
+    </div>
+                 <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0095_vase.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0116_car.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0118_clock.jpg" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0121_bus.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0133_house.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0135_painting.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0136_table.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0143_guitar.jpg" alt="MY ALT TEXT"/>
+    </div>
+                 <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0150_cup.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0152_bag.jpg" alt="MY ALT TEXT"/>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/in_the_wild/0158_camera.jpg" alt="MY ALT TEXT"/>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0168_book.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0195_shirt.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0241_soap.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0254_suitcase.jpg" alt="MY ALT TEXT"/>
+    </div>
+               <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0257_skateboard.jpg" alt="MY ALT TEXT"/>
+    </div>
+                         <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/in_the_wild/0284_table.jpg" alt="MY ALT TEXT"/>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+  <!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+        <br>
+      <h2 class="title is-3">Possible Editing Flows</h2>
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/editing.png" alt="Editing examples"/>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{shum2025coloralignmentdiffusion,
+      title={Color Alignment in Diffusion},
+      author={Ka Chun Shum and Binh-Son Hua and Duc Thanh Nguyen and Sai-Kit Yeung},
+      year={2025},
+      eprint={2503.06746},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.06746},
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
